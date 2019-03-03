@@ -1,0 +1,39 @@
+~リポジトリの内容変更～commit～push~
+
+
+\git clone "リポジトリのアドレス"
+Cloning into 'ファイル名'...
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (4/4), done.
+
+
+
+「ファイルが作成されているのでそこに変更内容を保存」
+
+
+
+\cd "変更したいファイルのアドレス"
+
+\git add "変更するファイル名"
+\git commit -m "コメント"
+*1
+
+\git push
+*2
+
+~push完了~
+
+
+*1「Your push would publish a private email address.」がでたときの対処方
+private設定されているのメールアドレスが公開されてしまうためにおこるエラー。
+setting→Emails→Keep my email address privateのチェックを外す。
+
+
+*2「Please tell me who you are.」がでてきた時の対処法
+gitに自分が誰かをわからせればよい
+
+\git config --global user.email "ここに自分のアドレス"
+\git config --global user.name "ここに自分の名前
