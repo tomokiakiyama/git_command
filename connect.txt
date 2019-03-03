@@ -1,0 +1,23 @@
+~GitHubの認証~
+
+\ssh-keygen -t rsa -C "登録したメールアドレス"
+Generating public/private rsa key pair.
+Enter file in which to save the key (C:\Users\Owner/.ssh/id_rsa):   ←Enter
+Created directory '/c/Usres/  /.ssh'.
+Enter passsghrase(empty for no passphrase)  ←パスワード入力
+Enter same passphrase again　 ←パスワード入力
+
+
+「入力後.sshファイルにid_rsa.pubが作成される。中身をコピーする。
+　GitHub→Setting→SSH and GPS keys→New SSH key
+　Key欄にコピーしたものを貼り付ける」
+
+~完了~
+
+
+~確認~
+
+\ssh -T git@github.com
+Enter passphrase for key 'C:\Users\Owner/.ssh/id_rsa':　←パスワード入力
+Hi name! You've successfully authenticated, but GitHub does not provide shell access.
+←認証完了の確認
